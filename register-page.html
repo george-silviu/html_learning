@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Register page</title>
+  </head>
+  <body>
+    <!-- some semantic elements -->
+    <head>
+      <h1>Register</h1>
+    </head>
+    <!-- semantic html element -->
+    <nav>
+      <a href="http://www.google.com"> Google </a>
+    </nav>
+
+    <!-- we use from element to capture data -->
+    <!-- we need name attributes for each field to send the field data on submission -->
+
+    <!--why span? - used to divide content and add style inline -->
+    <span> </span>
+    <!-- why div? - used to divide content and add styles on block -->
+    <div>
+      <form method="GET">
+        <!-- text inputs -->
+        <span>First name:</span> <input type="text" name="firstname" /> <br />
+        Last name: <input type="text" name="lastname" /><br />
+        <!-- email inputs -->
+        Email: <input type="email" name="email" required /> <br />
+        <!-- password input -->
+        Password: <input type="password" name="password" minlength="5" /><br />
+
+        <!-- date input type -->
+        Birthdate: <input type="date" name="date" /> <br />
+
+        <!-- radio buttons inputs -->
+        Gender: <br />
+        <input type="radio" name="gender" value="male" /> Male<br />
+        <input type="radio" name="gender" value="female" /> Female<br />
+        <input type="radio" name="gender" value="other" /> Other<br />
+
+        <!-- checkbox inputs -->
+        Pets: <br />
+        <input type="checkbox" name="cat" />Cat<br />
+        <input type="checkbox" name="dog" />Dog<br />
+        <!-- multiple select field element -->
+        Cars: <br />
+        <select name="cars">
+          <option value="volvo" name="volvo">Volvo</option>
+          <option value="audi" name="audi">Audi</option>
+          <option value="volkswagen" name="volkswagen">Volkswagen</option>
+        </select>
+        <br />
+
+        <!-- buttons types -->
+        <input type="submit" value="Register" />
+        <input type="reset" />
+      </form>
+    </div>
+
+    <!-- semantic html element -->
+    <footer>
+      <p>Webssite made with love.</p>
+    </footer>
+  </body>
+</html>
+
+<!-- using GET as form method = send data as request query parameters-->
+<!-- the way form data was attached to url on submit. this is called query strings -->
+<!-- 
+
+?
+firstname=test
+&lastname=test
+&email=test%40gmail.com
+&password=test123
+&date=2023-02-24
+&gender=male
+&dog=on
+&cars=audi
+
+-->
+
+<!-- using POST as form method = send data in the body of the request-->
